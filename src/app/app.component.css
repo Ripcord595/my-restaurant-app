@@ -1,0 +1,44 @@
+nav, header, footer {
+  position: relative;
+  z-index: 1;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Viewport height */
+}
+.nav-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+
+.auth-buttons button {
+  margin-left: 10px;
+  font-size: 10px;
+  padding: 10px 10px;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* 使用flexbox布局确保主内容至少充满除页脚外的整个高度 */
+.content {
+  min-height: calc(100% - 60px); /* 假设页脚高度为60px */
+  /* 您的其他样式 */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-words {
+  margin-top: auto; /* Pushes the footer to the bottom */
+  text-align: center; /* Centers the text inside the footer */
+}
+
+
+
