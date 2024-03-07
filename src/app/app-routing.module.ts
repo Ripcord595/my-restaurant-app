@@ -7,6 +7,7 @@ import {SignupComponent} from "./components/signup/signup.component";
 import {MenuDetailsComponent} from "./components/menu-details/menu-details.component";
 import {RestaurantsListComponent} from "./components/restaurants-list/restaurants-list.component";
 import {RestaurantManageComponent} from "./components/restaurant-manage/restaurant-manage.component";
+import {ItemDetailsComponent} from "./components/item-details/item-details.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   // 您可以选择添加一个通配符路由来处理未找到的路径，通常会导航到一个“NotFound”页面或返回主页
   { path: 'restaurant-list', component: RestaurantsListComponent },
   { path: 'menu-details/:id', component: MenuDetailsComponent },
+  { path:'item-details', component: ItemDetailsComponent},
   { path:'restaurant-manege', component:RestaurantManageComponent},
   { path: '**', redirectTo: '/homepage' },
 ];
