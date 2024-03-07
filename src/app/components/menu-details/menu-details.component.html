@@ -1,1 +1,11 @@
-<p>menu-details works!</p>
+<div *ngFor="let menuItem of menuItems">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ menuItem.name }}</mat-card-title>
+      <mat-card-subtitle>${{ menuItem.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ menuItem.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

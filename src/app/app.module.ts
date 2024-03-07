@@ -13,6 +13,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatIcon} from "@angular/material/icon";
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,14 @@ import {MatIcon} from "@angular/material/icon";
     ReactiveFormsModule,
     MatRadioGroup,
     MatIcon,
-    MatRadioButton
+    MatRadioButton,
+    MatGridList,
+    MatGridTile,
+    MatCard,
+    MatCardHeader,
+    MatCardContent,
+    MatCardActions,
+    MatCardModule
   ],
   providers: [
     provideAnimationsAsync()
