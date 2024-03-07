@@ -15,6 +15,8 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatIcon} from "@angular/material/icon";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { RestaurantManageComponent } from './components/restaurant-manage/restaurant-manage.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule} f
     MenuDetailsComponent,
     OrderPageComponent,
     RestaurantsListComponent,
-    SignupComponent
+    SignupComponent,
+    ItemDetailsComponent,
+    RestaurantManageComponent
   ],
   imports: [
     BrowserModule,
