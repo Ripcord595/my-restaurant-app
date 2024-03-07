@@ -9,6 +9,10 @@ import { MenuDetailsComponent } from './components/menu-details/menu-details.com
 import { OrderPageComponent } from './components/order-page/order-page.component';
 import { RestaurantsListComponent } from './components/restaurants-list/restaurants-list.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -22,9 +26,15 @@ import { SignupComponent } from './components/signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MatRadioGroup,
+    MatIcon,
+    MatRadioButton
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
