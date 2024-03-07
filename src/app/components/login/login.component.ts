@@ -1,18 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
-import {MatIcon} from "@angular/material/icon";
-import {RouterLink} from "@angular/router";
+
 @Component({
+  standalone: false,
   selector: 'app-login',
   templateUrl: './login.component.html',
-  imports: [
-    CommonModule,
-    MatRadioGroup,
-    MatRadioButton,
-    MatIcon,
-    RouterLink
-  ],
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit{
