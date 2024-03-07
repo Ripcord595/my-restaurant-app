@@ -1,0 +1,62 @@
+/*
+  fichier css du composant add-individus
+ */
+form{
+  padding: 10px;
+}
+div{
+  padding: 5px;
+  margin: 5px;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+}
+input{
+  display: inline-block;
+
+}
+#close{
+  margin-top: 0px;
+  background-color: azure;
+  margin-left: 410px;
+  cursor: pointer;
+}
+#editor{
+  alignment: center;
+  border:  solid 1px black;
+  background-color: lightyellow;
+  width: 750px;
+  height: 750px;
+  margin-left: 450px;
+}
+
+#reset{
+  background-color: azure;
+  margin: 10px;
+  cursor: pointer;
+}
+#reset:hover{
+  background-color: lightgray;
+}
+#reset.selected{
+  background-color: lightgray;
+}
+
+#soumettre{
+  background-color: azure;
+}
+.alert{
+  color: red;
+}
+
+mat-icon {
+  color: green;
+  font-size: 26px;
+}
+
+.bt{
+  font-weight: bold;
+  cursor: pointer;
+}

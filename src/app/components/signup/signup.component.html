@@ -1,1 +1,93 @@
-<p>signup works!</p>
+<a  routerLink="/login" routerLinkActive="active" style="margin-left: 350px">
+  <mat-icon>arrow_back</mat-icon>
+  <label>Back</label>
+</a>
+<section id="editor">
+  <div id="radio">
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1" checked="" (change)="changeUserType()">Client
+      </mat-radio-button>
+      <mat-radio-button value="2" (change)="changeUserType()">Restaurant</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div *ngIf="isClient">
+    <form action="#" method="get" [formGroup]="UserForm" style="text-align: center">
+      <div><label>Nom：</label><input type="text" formControlName="firstname"><br></div>
+      <div *ngIf="UserForm.get('firstname')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('firstname')?.errors?.['required']">
+          Le prénom est obligatoire!
+        </div>
+      </div>
+      <div><label>Prenom：</label><input type="text" formControlName="lastname"><br></div>
+      <div *ngIf="UserForm.get('lastname')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('lastname')?.errors?.['required']">
+          Le nom est obligatoire!
+        </div>
+      </div>
+      <div><label>Adresse: </label>
+        <input type="text" formControlName="adresse"><br>
+      </div>
+      <div *ngIf="UserForm.get('adresse')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('adresse')?.errors?.['required']">
+          L'adresse est obligatoire!
+        </div>
+      </div>
+      <div><label>Email：</label><input type="text" formControlName="email"><br></div>
+      <div *ngIf="UserForm.get('email')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('email')?.errors?.['required']">
+          L'email est obligatoire!
+        </div>
+      </div>
+      <div><label>Numéro de téléphone ：</label><input type="text" formControlName="telephone"><br></div>
+      <div *ngIf="UserForm.get('telephone')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('telephone')?.errors?.['required']">
+          Le numero de telephone est obligatoire!
+        </div>
+      </div>
+      <div ><label>Mot de passe: </label><input type="text" formControlName="password"><br></div>
+      <div *ngIf="UserForm.get('password')?.invalid" class="alert">
+        <div *ngIf="UserForm.get('password')?.errors?.['required']">
+          Un mot de passe est obligatoire!
+        </div>
+      </div>
+      <div style="text-align: center" >
+        <input class="bt" (click)="alert()"  id="reset" type="submit" value="M'inscrire" [disabled]="!UserForm.valid" >
+      </div>
+    </form>
+  </div>
+  <div *ngIf="!isClient">
+    <form action="#" method="get" [formGroup]="RestaurantForm" style="text-align: center">
+      <div><label>Nom：</label><input type="text" formControlName="restName"><br></div>
+      <div *ngIf="RestaurantForm.get('restName')?.invalid" class="alert">
+        <div *ngIf="RestaurantForm.get('restName')?.errors?.['required']">
+          Le nom du restaurant est obligatoire!
+        </div>
+      </div>
+      <div><label>Adresse de restaurant: </label>
+        <input type="text" formControlName="restAdresse"><br>
+      </div>
+      <div *ngIf="RestaurantForm.get('restAdresse')?.invalid" class="alert">
+        <div *ngIf="RestaurantForm.get('restAdresse')?.errors?.['required']">
+          L'adresse du restaurant est obligatoire!
+        </div>
+      </div>
+      <div><label>Numéro de téléphone ：</label><input type="text" formControlName="telephone"><br></div>
+      <div *ngIf="RestaurantForm.get('restTelephone')?.invalid" class="alert">
+        <div *ngIf="RestaurantForm.get('restTelephone')?.errors?.['required']">
+          Le numero de telephone (pour consulter) est obligatoire!
+        </div>
+      </div>
+      <div ><label>Mot de passe: </label><input type="text" formControlName="restPassword"><br></div>
+      <div *ngIf="RestaurantForm.get('restPassword')?.invalid" class="alert">
+        <div *ngIf="RestaurantForm.get('restPassword')?.errors?.['required']">
+          Un mot de passe est obligatoire!
+        </div>
+      </div>
+      <div style="text-align: center" >
+        <input class="bt" (click)="alert()"  id_rest="reset" type="submit" value="M'inscrire" [disabled]="!UserForm.valid" >
+      </div>
+    </form>
+  </div>
+</section>
+

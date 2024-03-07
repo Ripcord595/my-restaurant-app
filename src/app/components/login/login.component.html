@@ -1,1 +1,47 @@
-<p>login works!</p>
+<!--la template du composant log-in-->
+<div class="wrap" id="wrap">
+  <div class="logWrap">
+    <img id="banner" class="banner" src="../../../assets/loginimg.jpeg">
+    <div class="logShow">
+      <div class="LoginIndex LoginTop">
+        <p class="p1">Bienvenu</p>
+      </div>
+      <div id="radio">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1" checked="" (change)="changeUserType()">Client
+          </mat-radio-button>
+          <mat-radio-button value="2" (change)="changeUserType()">Restaurant</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <form>
+        <div class="InputStr">
+          <mat-icon width="20" height="20">account_box</mat-icon>
+          <input type="text" #username
+                 placeholder="nom d'utilisateur"/>
+        </div>
+        <div class="InputStr">
+          <mat-icon width="20" height="20">https</mat-icon>
+          <input type="password" #password
+                 placeholder="mot de passe"/>
+          <a  routerLink="/signup"  routerLinkActive="active"  style="margin-left: 100px;margin-top: 10px;">Creer un compte</a>
+        </div>
+      </form>
+
+      <div *ngIf="isUserLogin" class="LoginButton">
+        <!--une lien vers le main page de client-->
+        <a (click)="setInfoLogIn(username.value,password.value)"
+           routerLink="/main-page" routerLinkActive="active">
+          <button class="btLogIn" >Log in</button>
+        </a>
+      </div>
+      <div *ngIf="!isUserLogin" class="LoginButton">
+        <!--une lien vers le main page de restaurant-->
+        <a (click)="setInfoLogIn(username.value,password.value)"
+           routerLink="/menu-directeur" routerLinkActive="active"><!--une lien vers le menu de directeur-->
+          <button class="btLogIn">Log in</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
