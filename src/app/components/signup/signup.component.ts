@@ -1,8 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {RouterLink, RouterOutlet} from '@angular/router';
-import {MatIcon} from "@angular/material/icon";
-import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
