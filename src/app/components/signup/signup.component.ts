@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -17,7 +17,8 @@ export class SignupComponent implements OnInit{
   // @ts-ignore
   RestaurantForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
+
   }
 
   ngOnInit(): void {
@@ -47,6 +48,10 @@ export class SignupComponent implements OnInit{
   }
 
   alert() {
-    window.alert('inscription réussie!');
+    // 显示警告框
+    window.alert('Inscription réussie!');
+    this.router.navigate(['/login']);
+
   }
+
 }
