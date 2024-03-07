@@ -6,19 +6,33 @@ nav, header, footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Viewport height */
-}
-.nav-bar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
+  padding-top: 70px;
 }
 
+.nav-bar {
+  position: fixed; /* 改为 fixed 以保持导航栏固定在顶部 */
+  top: 0;
+  left: 0; /* 改为 left: 0，以放置在左上角 */
+  width: 100%; /* 使导航栏宽度充满整个屏幕 */
+  z-index: 1000; /* 确保导航栏在其他内容之上 */
+  background-color: #fff; /* 可选：为了清晰可见，可能需要一个背景颜色 */
+  display: flex;
+  justify-content: space-between; /* 用于左右对齐logo和按钮 */
+  align-items: center;
+  padding: 10px 10px; /* 根据需要增加padding */
+  margin-bottom: 5px;
+}
+.logo {
+  height: 60px; /* Logo的高度 */
+  width: auto; /* 保持宽高比 */
+  margin-right: auto; /* 将logo推到左边 */
+}
 
 .auth-buttons button {
   margin-left: 10px;
-  font-size: 10px;
-  padding: 10px 10px;
+  font-size:20px;
+  padding: 5px 5px;
+  margin-right: 25px;
 }
 
 
