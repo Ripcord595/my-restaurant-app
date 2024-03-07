@@ -7,9 +7,12 @@ import {SignupComponent} from "./components/signup/signup.component";
 
 
 const routes: Routes = [
-  { path: 'homepage', component: HomepageComponent }, // Définir la page d'accueil comme itinéraire racine
+  { path: '', redirectTo: '/homepage', pathMatch: 'full' }, // 当URL为根路径时，重定向到'/homepage'
+  { path: 'homepage', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  // 您可以选择添加一个通配符路由来处理未找到的路径，通常会导航到一个“NotFound”页面或返回主页
+  { path: '**', redirectTo: '/homepage' },
 ];
 
 @NgModule({
