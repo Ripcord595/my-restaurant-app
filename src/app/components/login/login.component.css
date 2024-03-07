@@ -12,12 +12,10 @@
 #wrap .logWrap{
   height: 408px;
   width: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  margin: 0 0 0 -300px;
-  display: inline-block;
+
+  margin-left: auto; /* 设置左边距为自动 */
+  margin-right: auto; /* 设置右边距为自动 */
+  display: block; /* 这是默认值，确保元素被视为块级元素 */
 }
 #wrap .banner{
   height: 300px;

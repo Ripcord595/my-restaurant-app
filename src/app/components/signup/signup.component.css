@@ -24,12 +24,13 @@ input{
   cursor: pointer;
 }
 #editor{
-  alignment: center;
-  border:  solid 1px black;
+  border: solid 1px black;
   background-color: lightyellow;
   width: 750px;
   height: 750px;
-  margin-left: 450px;
+  margin-left: auto; /* 设置左边距为自动 */
+  margin-right: auto; /* 设置右边距为自动 */
+  display: block; /* 这是默认值，确保元素被视为块级元素 */
 }
 
 #reset{
