@@ -2,7 +2,7 @@
   <mat-grid-list cols="3" rowHeight="350px" gutterSize="80px">
     <mat-grid-tile *ngFor="let menuItem of menuItems">
       <mat-card class = "menuItem-card" style="background: cornsilk">
-        <mat-card-header>
+        <mat-card-header class = "card-header">
           <mat-card-title>{{ menuItem.name }}</mat-card-title>
           <mat-card-subtitle>${{ menuItem.price }}</mat-card-subtitle>
         </mat-card-header>
