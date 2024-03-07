@@ -1,0 +1,76 @@
+.item-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-link {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  display: flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 100%; /* 容器宽度 */
+  max-width: 300px; /* 最大宽度，根据需要调整 */
+  margin: auto; /* 上下自动边距 */
+}
+
+.item-image img {
+  max-width: 100%; /* 图片最大宽度为其容器宽度 */
+  height: auto; /* 高度自动以保持宽高比 */
+}
+
+
+.item-content {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item-weight,
+.item-price {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.quantity-selector {
+  margin: 10px 0;
+}
+
+.add-to-order-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-to-order-btn:hover {
+  background-color: #333;
+}
+
+.item-description p {
+  margin-bottom: 20px;
+}
+
+.edit-replacement-btn {
+  color: blue;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-replacement-btn:hover {
+  text-decoration: underline;
+}
