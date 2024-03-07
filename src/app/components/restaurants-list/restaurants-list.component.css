@@ -1,0 +1,14 @@
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartit l'espace de manière égale */
+  height: 100%; /* Utilise toute la hauteur de la tuile */
+  box-sizing: border-box; /* Assure que padding et border sont inclus dans la hauteur et largeur */
+  width: 100%;
+}
+
+.mat-card {
+  height: 100%; /* Assure que la carte prend toute la hauteur de son conteneur */
+  width: 100% ;
+}

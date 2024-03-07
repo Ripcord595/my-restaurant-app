@@ -1,0 +1,32 @@
+.menuItem-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartit l'espace de manière égale */
+  height: 100%; /* Utilise toute la hauteur de la tuile */
+  box-sizing: border-box; /* Assure que padding et border sont inclus dans la hauteur et largeur */
+  width: 100%;
+}
+.menuItem-card {
+  height: 100%; /* Assure que la carte prend toute la hauteur de son conteneur */
+  width: 100% ;
+}
+.imgItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Répartit l'espace de manière égale */
+  height: 70%; /* Utilise toute la hauteur de la tuile */
+  box-sizing: content-box; /* Assure que padding et border sont inclus dans la hauteur et largeur */
+  width: 70%;
+
+
+}
+.itemcommande{
+  display: flex;
+  border-radius: 20px;
+  height: 10%; /* Assure que la carte prend toute la hauteur de son conteneur */
+  width: 20%;
+  justify-content: center;
+
+
+
+}
