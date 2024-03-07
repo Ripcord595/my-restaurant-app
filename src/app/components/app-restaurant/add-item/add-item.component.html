@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Ajout d'item</h2>
+<mat-dialog-content class="mat-typography">
+  <form>
+    <mat-form-field>
+      <label>Description:</label>
+      <input matInput style="width: 200px; height: 120px; margin-left: auto" placeholder="Entrer la description">
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <label>Prix:</label>
+      <input matInput type="number" style="margin-left: auto"  placeholder="Entrer le prix">
+    </mat-form-field><br>
+
+    <div>
+      <input type="file" (change)="onFileSelected($event)"> <br>
+      <img [src]="selectedImage" *ngIf="selectedImage" style="width: 300px; height: 200px">
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onUpload()" routerLink="/restaurant-manage" mat-dialog-close>Add</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
