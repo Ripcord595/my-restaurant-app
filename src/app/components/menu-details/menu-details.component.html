@@ -2,14 +2,14 @@
   <mat-grid-list cols="3" rowHeight="350px" gutterSize="80px">
     <mat-grid-tile *ngFor="let menuItem of menuItems">
       <mat-card class = "menuItem-card" style="background: cornsilk">
-        <mat-card-header>
+        <mat-card-header class = "card-header">
           <mat-card-title>{{ menuItem.name }}</mat-card-title>
           <mat-card-subtitle>${{ menuItem.price }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <img [src]  = "menuItem.imageUrl" alt="Produit 1.1" class="imgItem" >
           <p>{{ menuItem.description }}</p>
-          <button class="itemcommande" >detail</button>
+          <button routerLink="/item-details" class="itemcommande" >detail</button>
         </mat-card-content>
 
       </mat-card>
