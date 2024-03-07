@@ -13,9 +13,9 @@
   height: 408px;
   width: 600px;
 
-  margin-left: auto; /* 设置左边距为自动 */
-  margin-right: auto; /* 设置右边距为自动 */
-  display: block; /* 这是默认值，确保元素被视为块级元素 */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 #wrap .banner{
   height: 300px;

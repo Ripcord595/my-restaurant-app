@@ -11,17 +11,17 @@
 }
 
 .item-image {
-  display: flex; /* 使用flex布局 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  width: 100%; /* 容器宽度 */
-  max-width: 300px; /* 最大宽度，根据需要调整 */
-  margin: auto; /* 上下自动边距 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
 
 .item-image img {
-  max-width: 100%; /* 图片最大宽度为其容器宽度 */
-  height: auto; /* 高度自动以保持宽高比 */
+  max-width: 100%;
+  height: auto;
 }
 
 

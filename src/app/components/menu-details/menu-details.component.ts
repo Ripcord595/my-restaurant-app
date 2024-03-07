@@ -58,7 +58,7 @@ export class MenuDetailsComponent {
     this.menuItems = this.getMenuItems(restaurantId);
   }
   getMenuItems(restaurantId: number): MenuItem[] {
-    // 根据restaurantId筛选对应餐厅的菜单项
+
     return this.menuItems.filter(item => item.restaurantId === restaurantId);
   }
 
