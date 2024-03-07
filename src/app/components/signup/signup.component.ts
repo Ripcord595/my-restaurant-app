@@ -48,7 +48,6 @@ export class SignupComponent implements OnInit{
   }
 
   alert() {
-    // 显示警告框
     window.alert('Inscription réussie!');
     this.router.navigate(['/login']);
 
