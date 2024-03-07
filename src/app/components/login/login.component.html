@@ -30,14 +30,14 @@
       <div *ngIf="isUserLogin" class="LoginButton">
         <!--une lien vers le main page de client-->
         <a (click)="setInfoLogIn(username.value,password.value)"
-           routerLink="/main-page" routerLinkActive="active">
+           routerLink="/restaurant-list" routerLinkActive="active">
           <button class="btLogIn" >Log in</button>
         </a>
       </div>
       <div *ngIf="!isUserLogin" class="LoginButton">
         <!--une lien vers le main page de restaurant-->
         <a (click)="setInfoLogIn(username.value,password.value)"
-           routerLink="/menu-directeur" routerLinkActive="active"><!--une lien vers le menu de directeur-->
+           routerLink="/restaurant-manege" routerLinkActive="active"><!--une lien vers le menu de directeur-->
           <button class="btLogIn">Log in</button>
         </a>
       </div>
