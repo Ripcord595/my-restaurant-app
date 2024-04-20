@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  role VARCHAR(20) NOT NULL,
+  phone_number VARCHAR(20)
+  );
+
+
+CREATE TABLE IF NOT EXISTS restaurants (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  owner_id BIGINT NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  address TEXT NOT NULL,
+  phone VARCHAR(20),
+  FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE
+  );
+
+
+CREATE TABLE IF NOT EXISTS foods (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  restaurant_id BIGINT NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (restaurant_id) REFERENCES restaurants(id) ON DELETE CASCADE
+  );
+
