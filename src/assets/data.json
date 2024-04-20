@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "customer123",
+      "password": "123456",
+      "email": "customer123@example.com",
+      "registerTime": "2024-01-01T10:00:00.000Z",
+      "userType": "customer"
+    },
+    {
+      "id": 2,
+      "username": "owner456",
+      "password": "hashedpassword",
+      "email": "owner456@restaurant.com",
+      "registerTime": "2024-01-02T11:00:00.000Z",
+      "userType": "restaurantOwner"
+    }
+
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Pasta Paradise",
+      "description": "A delightful range of classic Italian pasta dishes",
+      "address": "123 Food Lane, Tasty Town, 98765",
+      "phone": "123-456-7890",
+      "category": "Italian",
+       "imageUrl": "url_to_image"
+    },
+    {
+      "id": 2,
+      "name": "Curry Corner",
+      "description": "Authentic Indian curries and tandoor specialties",
+      "address": "456 Spice St, Flavor City, 67890",
+      "phone": "234-567-8901",
+      "category": "Indian",
+      "imageUrl": "url_to_image"
+    }
+
+  ],
+  "menuItems": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "Spaghetti Carbonara",
+      "description": "Creamy pasta with crispy pancetta and a rich egg sauce",
+      "price": 12.99,
+      "category": "Pasta",
+      "imageUrl": "url_to_image_of_dish"
+    },
+    {
+      "id": 2,
+      "restaurantId": 2,
+      "name": "Butter Chicken",
+      "description": "Tender chicken in a creamy spiced tomato sauce",
+      "price": 10.99,
+      "category": "Curry",
+      "imageUrl": "url_to_image_of_dish"
+    }
+
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "restaurantId": 1,
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 2,
+          "price": 12.99
+        }
+      ],
+      "totalPrice": 25.98,
+      "status": "ordered",
+      "orderTime": "2024-04-20T12:00:00.000Z",
+      "deliveryTime": null
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "restaurantId": 2,
+      "items": [
+        {
+          "menuItemId": 2,
+          "quantity": 1,
+          "price": 10.99
+        }
+      ],
+      "totalPrice": 10.99,
+      "status": "delivered",
+      "orderTime": "2024-04-19T18:00:00.000Z",
+      "deliveryTime": "2024-04-19T19:30:00.000Z"
+    }
+
+  ]
+}

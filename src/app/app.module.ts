@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; // 确保导入 HttpClientModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,18 +10,20 @@ import { MenuDetailsComponent } from './components/menu-details/menu-details.com
 import { OrderPageComponent } from './components/order-page/order-page.component';
 import { RestaurantsListComponent } from './components/restaurants-list/restaurants-list.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+
+// Import Angular Material modules here
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
-import {MatIcon} from "@angular/material/icon";
-import {MatGridList, MatGridTile} from "@angular/material/grid-list";
-import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatIconModule } from "@angular/material/icon";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from "@angular/material/form-field";
+
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { RestaurantManageComponent } from './components/app-restaurant/restaurant-manage/restaurant-manage.component';
 import { AddItemComponent } from './components/app-restaurant/add-item/add-item.component';
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-
 
 @NgModule({
   declarations: [
@@ -39,23 +42,17 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatRadioGroup,
+    HttpClientModule, // 添加 HttpClientModule 到 imports 数组
+    BrowserAnimationsModule, // 添加 BrowserAnimationsModule
+    // 添加 Angular Material modules
     MatDialogModule,
-    MatIcon,
-    MatRadioButton,
-    MatGridList,
-    MatGridTile,
-    MatCard,
-    MatCardHeader,
-    MatCardContent,
-    MatCardActions,
+    MatRadioModule,
+    MatIconModule,
+    MatGridListModule,
     MatCardModule,
-    MatLabel,
-    MatFormField
+    MatFormFieldModule
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
